@@ -1,0 +1,216 @@
+/*###变量声明###*/
+/* 导航菜单字体颜色 */
+/* 导航菜单背景色 */
+/* 菜单边线颜色 */
+/* 菜单按钮颜色*/
+/*菜单样式*/
+.clearfix:after {
+  content: "020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+/* 字体 */
+.menu-wrap {
+  font-family: "Microsoft YaHei", "黑体", "宋体", "sans-serif";
+  font-weight: bold;
+}
+.menu a {
+  font-size: 14px;
+}
+/**
+* 菜单样式文件
+*/
+.menu-wrap {
+  position: relative;
+  background-color: #00a0e9;
+}
+.menu-btn {
+  display: none;
+  width: 26px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #00a0e9;
+  color: #fff;
+}
+.menu-btn:hover {
+  color: #fff;
+  background-color: #21b9ff;
+}
+.menu-btn-left {
+  float: left;
+}
+.menu-btn-right {
+  float: right;
+}
+.menu {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  overflow: hidden;
+  height: 35px;
+}
+/* 一级菜单样式 */
+.menu-primary {
+  position: absolute;
+}
+.menu-primary-item {
+  float: left;
+}
+.menu-primary-item-a {
+  display: inline-block;
+/*max-width: 106px;*/
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+}
+.menu-primary-item-a:hover {
+  color: #fff;
+  background: #21b9ff;
+  cursor: pointer;
+}
+.menu-primary-item-a.active {
+  border-left: 1px solid #00a0e9;
+  border-right: 1px solid #00a0e9;
+  padding-left: 19px;
+  padding-right: 19px;
+  color: #00a0e9;
+  cursor: text;
+  background-color: #fafafa;
+}
+/* 二级菜单样式 */
+.menu-second-box {
+  position: absolute;
+  top: 35px;
+  z-index: 100;
+  border: 1px solid #00a0e9;
+  border-top: none;
+}
+.box-overflow-hidden {
+  overflow: hidden;
+  padding-top: 28px;
+}
+.menu-second-box .button-up {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  margin: 0 auto;
+  height: 28px;
+  border-bottom: 1px solid #ceefff;
+  text-align: center;
+  color: #fff;
+  background: #00a0e9;
+}
+.menu-second-box .button-down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 380px;
+  z-index: 100;
+  margin: 0 auto;
+  height: 28px;
+  border-top: 1px solid #ceefff;
+  text-align: center;
+  color: #fff;
+  background: #00a0e9;
+}
+.position-right {
+  right: 0;
+}
+.position-left {
+  left: 0;
+}
+.button-up span,
+.button-down span {
+  color: #fff;
+}
+.button-up span.disabled,
+.button-down span.disabled {
+  color: #00afff;
+}
+.menu-second {
+  background: #fff;
+}
+.nav-second-over {
+  position: absolute;
+  top: 29px;
+}
+.menu-second-item {
+  font-size: 14px;
+  font-weight: normal;
+}
+.menu-second-item-a {
+  display: block;
+  float: left;
+  padding-left: 13px;
+/*test*/
+  padding-right: 10px;
+  line-height: 30px;
+  border-top: 1px solid #c7f0ff;
+  background-color: #fafafa;
+  color: #7d7d7d;
+  white-space: nowrap;
+}
+.menu-second-item-a:hover {
+  cursor: text;
+  color: #00a0e9;
+}
+.menu-second .menu-second-item:first-child .menu-second-item-a {
+  padding-top: 10px;
+  border-top: none;
+}
+/* 三级菜单样式 */
+.menu-third {
+  float: left;
+  margin-left: 4px;
+  padding-left: 10px;
+  border-top: 1px solid #c7f0ff;
+  background-color: #fff;
+}
+.menu-third:empty {
+  height: 30px;
+}
+.menu-second-item:first-child .menu-third {
+  padding-top: 10px;
+  border-top: none;
+}
+.menu-third-item {
+  float: left;
+}
+.menu-third-item-a {
+  display: block;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  color: #666;
+/*超出隐藏*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-third-item-a:hover {
+  cursor: pointer;
+  color: #00a0e9;
+}
+.menu-third-item-a.has-border {
+  border-bottom: 1px dashed #ceefff;
+}
+/*叶子导航项*/
+.end-nav-item-a {
+  color: #333;
+}
+.end-nav-item-a:hover {
+  cursor: pointer;
+  color: #00a0e9;
+}

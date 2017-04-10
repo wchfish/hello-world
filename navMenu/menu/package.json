@@ -1,0 +1,21 @@
+{
+  "name": "menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chain": "^0.1.3",
+    "mocha": "^3.2.0",
+    "stylus": "^0.54.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "stylus stylus/newMenu.styl -o css/newMenu_styl.css"
+  },
+  "author": "wangc",
+  "license": "ISC"
+}

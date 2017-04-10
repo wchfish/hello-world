@@ -1,0 +1,406 @@
+/*共用的顶部样式*/
+html,body {
+	font-family: "Microsoft YaHei", "黑体", "宋体", "sans-serif";
+	font-size: 16px;
+}
+
+.header {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 104px;
+	background: #00A0E9;
+	color: #fff;
+}
+
+.brand {
+	float: left;
+	width: 340px;
+	height: 48px;
+	padding-left: 40px;
+	padding-top: 3px;
+	background: url(../images/LOGO2.png) 10px 10px no-repeat;
+}
+
+.brand .app-name {
+	margin: 3px 0 0 10px;
+	padding-left: 10px;
+	height: 42px;
+	line-height: 42px;
+	border-left: 0px solid #fff;
+	font-size: 20px;
+}
+
+.header .top-info {
+	float: right;
+	width: 180px;
+	height: 66px;
+}
+
+#info-box {
+	height: 36px;
+	width: 180px;
+	float: right;
+}
+
+.btn-key,.btn-notice,.btn-question,.btn-power,.btn-wiki,.btn-invitation
+	{
+	float: right;
+	width: 26px;
+	height: 26px;
+	border: 0;
+	color: #FFF;
+	background: #00A0E9;
+}
+
+.btn-key span.icon,.btn-notice span.icon,.btn-qusetion span.icon,.btn-power span.icon,.btn-invitation span.icon
+	{
+	font-size: 16px;
+}
+
+.btn-key.btn-active,.btn-notice.btn-active,.btn-question.btn-active,.btn-invitation.btn-active,.btn-power.btn-active
+	{
+	background-color: #00ABF8;
+}
+
+.btn-key.btn-active span.icon,.btn-notice.btn-active span.icon,.btn-question.btn-active span.icon,.btn-power.btn-active span.icon,.btn-invitation.btn-active span.icon
+	{
+	color: #FFF;
+}
+
+.btn-power.btn-active span.icon {
+	color: red
+}
+
+#info-box span.btn-text {
+	padding: 0;
+}
+
+.btn-notice .icon-notice {
+	position: relative;
+}
+
+.notice-mark {
+	position: absolute;
+	right: -3px;
+	top: -3px;
+	width: 6px;
+	height: 6px;
+	background: url(../images/u42.PNG);
+}
+
+.welcome-info {
+	height: 30px;
+	width: 180px;
+	float: right;
+	overflow: hidden;
+}
+
+.welcome-info span {
+	margin-right: 10px;
+	float: right;
+	font-size: 14px;
+	color: #FFF;
+}
+
+/*顶部导航条*/
+/*一级菜单样式*/
+.panel-body .top-info{
+	background: #00A0E9;	
+}
+#nav-menu {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	/*width: 1267px;*/
+	width: 95%;
+	height: 35px;
+	background: #00A0E9;
+}
+
+.nav-primary-box {
+	position: absolute;
+	left: 26px;
+	bottom: 0;
+	width: 1215px;
+}
+
+#nav-menu  .primary-li {
+	float: left;
+	position: relative;
+}
+
+.primary-li.before-show,.primary-li.after-show {
+	display: none;
+}
+
+.primary-li.show-item {
+	display: block;
+}
+
+.primary-a {
+	display: inline-block;
+	/*max-width: 106px;*/
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	color: #FFF;
+}
+
+.primary-a:hover {
+	color: #fff;
+	background: #21B9FF;
+	cursor: pointer;
+}
+
+.primary-a.active {
+	border-left: 1px solid #00A1E8;
+	border-right: 1px solid #00A1E8;
+	padding-left: 19px;
+	padding-right: 19px;
+	color: #00A0E9;
+	cursor: text;
+	background-color: #FAFAF9;
+}
+/*菜单控制按钮*/
+#nav-menu a.btn-left {
+	position: absolute;
+	left: 0;
+	background: #00A0E9;
+	display: none
+}
+
+#nav-menu a.btn-right {
+	position: absolute;
+	right: 0px;
+	background: #00A0E9;
+	display: none
+}
+
+#nav-menu a.btn-left:hover,#nav-menu a.btn-right:hover {
+	color: #fff;
+	background: #21B9FF;
+}
+
+a.btn-left span.btn-text,a.btn-right span.btn-text {
+	padding: 0;
+}
+/*二级菜单样式*/
+.nav-second-box {
+	position: absolute;
+	top: 35px;
+	z-index: 100;
+	border: 1px solid #00A1E8;
+	border-top: none;
+}
+
+.box-overflow-hidden {
+	overflow: hidden;
+	padding-top: 28px;
+}
+
+.nav-second-box .button-up {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 100;
+	margin: 0 auto;
+	height: 28px;
+	border-bottom: 1px solid #00CBFF;
+	text-align: center;
+	color: #00f;
+	background: #FAFAF9;
+}
+
+.nav-second-box .button-down {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 380px;
+	z-index: 100;
+	margin: 0 auto;
+	height: 28px;
+	border-top: 1px solid #00CBFF;
+	text-align: center;
+	color: #00f;
+	background: #FAFAF9;
+}
+
+.position-right {
+	right: 0;
+}
+
+.position-left {
+	left: 0;
+}
+
+.button-up span,.button-down span {
+	color: #00A0E9;
+}
+
+.button-up span.disabled,.button-down span.disabled {
+	color: #A6E3FF;
+}
+
+.nav-second {
+	background: #FFF;
+}
+
+.nav-second-over {
+	position: absolute;
+	top: 29px;
+}
+
+.second-li {
+	font-size: 14px;
+	font-weight: normal
+}
+
+.second-a {
+	display: block;
+	float: left;
+	padding-left: 13px;
+	line-height: 30px;
+	border-top: 1px solid #C7F0FF;
+	background-color: #FAFAF9;
+	color: #7d7d7d;
+	/*test*/
+	white-space: nowrap;
+}
+
+.second-a:hover {
+	cursor: text;
+	color: #7d7d7d;
+}
+
+.nav-second .second-li:first-child .second-a {
+	padding-top: 10px;
+	border-top: none;
+}
+/*三级菜单样式*/
+.nav-third {
+	float: left;
+	margin-left: 4px;
+	padding-left: 10px;
+	border-top: 1px solid #C7F0FF;
+	background-color: #FFF;
+}
+
+.nav-third:empty {
+	height: 30px;
+}
+
+.nav-second .second-li:first-child .nav-third {
+	padding-top: 10px;
+	border-top: none;
+}
+
+.third-li {
+	float: left;
+}
+
+.third-a {
+	display: block;
+	width: 111px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #666666;
+}
+
+.third-a:hover {
+	cursor: text;
+	color: #00A0E9;
+}
+
+.third-a.has-border {
+	border-bottom: 1px dashed #CEF2FF;
+}
+/*叶子导航项*/
+.end-nav-item {
+	color: #333333;
+}
+
+.end-nav-item:hover {
+	cursor: pointer;
+	color: #00A0E9;
+}
+/*tabs页签关闭按钮样式修正*/
+a.tabs-close  span {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/*左侧布局*/
+/*左侧布局搜索框*/
+#search-tool {
+	margin: 5px;
+}
+
+.search-box {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	width: 180px;
+}
+
+.search-box .wrap {
+	overflow: hidden;
+}
+
+.search-box input {
+	width: 150px;
+	height: 20px;
+	line-height: 20px;
+	margin: 2px 0 0 5px;
+	border: none;
+}
+
+.search-box span.btn-search {
+	text-align: center;
+	vertical-align: center;
+	width: 24px;
+	height: 24px;
+	font-size: 16px;
+}
+/*修改密码弹出框的样式*/
+.pass-box p {
+	margin-top: 8px;
+}
+
+.pass-box p label {
+	width: 60px;
+	display: inline-block;
+	text-align: right;
+	font-size: 12px;
+}
+
+.pass-box p input {
+	padding: 4px 8px;
+	width: 140px;
+	border: 1px solid #aaa;
+}
+
+.pass-box p input[readonly] {
+	color: #aaa;
+}
+
+.pass-box p .info {
+	color: #f00;
+	margin: 4px;
+	display: block;
+}
+/*顶部折叠按钮*/
+.header-roll {
+	position: absolute;
+	right: 5px;
+	bottom: 7px;
+	font-size: 20px;
+	color: #FFF
+}
+
+.header-roll {
+	cursor: pointer;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>四级菜单</title>
+
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/topMenu_styl.css">
+	<link rel="stylesheet" type="text/css" href="css/newMenu_styl.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+
+	<script src="scripts/jquery/jquery-1.10.2.js"></script>
+	<script src="mockData/menu.js"></script>
+	<script src="scripts/newMenu.js"></script>
+	<!--<script src="scripts/topMenu.js"></script>-->
+	<script src="scripts/plugin/plugin.topMenu.hide.js"></script>
+	<script src="scripts/plugin/plugin.topMenu.fade.js"></script>
+	<script src="scripts/topMenu_alpha_0.1.js"></script>
+</head>
+<body>
+	<h3>四级菜单构造</h3>
+	<div id="myMenu"></div>
+	<div class="splitLine" style="border:3px solid #fff;"></div>
+	<div id="childMenu"></div>
+	<!-- <div id="myBtn">test</div> -->
+	<!-- <div class="topMenu-wrap">
+		<div class="topMenu">
+			<ul class="topMenu-content">
+				<li class="topMenu-item">
+					<a href="javascript:void(0);" class="topMenu-item-a"><span class="icon icon-bars topMenu-item-icon" style="display:block;"></span><span class="topMenu-item-text">取消</span></a>
+				</li>
+				<li class="topMenu-item">
+					<a href="javascript:void(0);" class="topMenu-item-a"><span class="icon icon-cancel-circle topMenu-item-icon" ></span><span class="topMenu-item-text">取消</span></a>
+				</li>
+				<li class="topMenu-item">
+					<a href="javascript:void(0);" class="topMenu-item-a"><span class="icon icon-cancel-circle topMenu-item-icon" ></span><span class="topMenu-item-text">取消</span></a>
+				</li>
+				<li class="topMenu-item">
+					<a href="javascript:void(0);" class="topMenu-item-a"><span class="icon icon-cancel-circle topMenu-item-icon" ></span><span class="topMenu-item-text">取消</span></a>
+				</li>
+				<li class="topMenu-item">
+					<a href="javascript:void(0);" class="topMenu-item-a"><span class="icon icon-cancel-circle topMenu-item-icon" ></span><span class="topMenu-item-text">取消</span></a>
+				</li>
+			</ul>
+		</div>
+		<a href="javascript:void(0);" class="topMenu-btn topMenu-btn-left"><span class="icon icon-arrow-left"></span></a>
+		<a href="javascript:void(0);" class="topMenu-btn topMenu-btn-right"><span class="icon icon-arrow-right"></span></a>
+	</div> -->
+	
+
+	<script type="text/javascript">
+	$( function() {
+			//假数据
+			var data = [ {
+				id : '01', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			}, {
+				id : '02', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			}, {
+				id : '03', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			}, {
+				id : '04', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			}, {
+				id : '05', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			}, {
+				id : '02', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			}, {
+				id : '03', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			}, {
+				id : '04', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			}, {
+				id : '05', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			}, {
+				id : '02', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			}, {
+				id : '03', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			}, {
+				id : '04', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			}, {
+				id : '05', url : 'haha', iconClass : 'icon-bars', text : '分析'
+			} ];
+
+			var menu1 = $( '#myMenu' )[0];
+			var topMenu = new TopMenu( menu1, {
+				// test
+				isFit: false,
+				width: 600,
+
+				data : topMenuData,
+				childMenuDom : $( '#childMenu' )[0],
+				childMenuOptions : {
+					onMenuItemClick: function(e, args) {
+						console.log(args);
+					}
+				},
+				plugins: [
+					new TopMenuFade(),
+					new TopMenuHide()
+				]
+			} );
+			window.topMenu = topMenu;
+
+		// var menuData = menus;
+		// var menu2 = $( '#childMenu' );
+		// var childMenu = new NewMenu( menu2, {
+		// 	data : menuData
+		// });
+
+		//测试多次设置子菜单后内存占用情况
+		// var btn = $( '#myBtn' );
+		// btn.on( 'click', function() {
+		// 	var count = 0;
+		// 	var interval = setInterval(function() {
+		// 		if ( count < 100 ) {
+		// 			$( '.topmenu-item:first' ).trigger( 'click' );
+		// 			console.log( count );
+		// 			count ++;	
+		// 		} else {
+		// 			clearInterval( interval );
+		// 			console.log( 'end' );
+		// 		}
+				
+		// 	}, 500); 
+		// });
+		
+	} );
+		
+	</script>
+</body>
+</html>

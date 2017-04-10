@@ -1,0 +1,95 @@
+/* stylus特性 */
+/*菜单几何属性*/
+/* 清除浮动 */
+.clearfix:after {
+  content: "020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+/* 字体 */
+.topMenu-wrap {
+  font-family: "Microsoft YaHei", "微软雅黑", "黑体", "宋体", "sans-serif";
+  font-weight: bold;
+}
+/* 顶部菜单 */
+.topMenu-wrap {
+  position: relative;
+  background-color: #00a0e9;
+  height: 80px;
+}
+.topMenu-btn {
+  width: 26px;
+  height: 80px;
+  line-height: 80px;
+  background-color: #00a0e9;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+}
+.topMenu-btn.btn-active:hover {
+  color: #fff;
+  background-color: #21b9ff;
+}
+.topMenu-btn.btn-disabled:hover {
+  color: #c8c8c8;
+}
+.topMenu-btn-left {
+  float: left;
+}
+.topMenu-btn-right {
+  float: right;
+}
+.btn-disabled {
+/*display: none;*/
+  color: #c8c8c8;
+}
+.topMenu {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  overflow: hidden;
+  height: 80px;
+}
+/* 一级菜单样式 */
+.topMenu-content {
+  position: absolute;
+}
+.topMenu-item {
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.topMenu-item-a {
+  display: block;
+  padding: 5px;
+  width: 100px;
+  height: 80px;
+  text-align: center;
+  color: #fff;
+}
+.topMenu-item-a:hover {
+  color: #fff;
+  background: #21b9ff;
+  cursor: pointer;
+}
+.topMenu-item-a.active {
+  color: #03ace3;
+  background: #eaf8fe;
+}
+.topMenu-item-icon {
+  margin-top: 8px;
+  height: 32px;
+  font-size: 32px;
+}
+.topMenu-item-text {
+  display: block;
+  margin-top: 8px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+}

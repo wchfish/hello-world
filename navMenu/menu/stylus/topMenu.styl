@@ -1,0 +1,117 @@
+/* stylus特性 */
+/*菜单几何属性*/
+$topMenu-height = 80px;
+$topMenu-btn-height = $topMenu-height;
+$topMenu-btn-width = 26px;
+$topMenu-item-marginLeft = 5px;
+$topMenu-item-marginRight = 5px;
+$topMenu-item-a-width = 100px;
+$topMenu-item-a-height = 70px;
+$topMenu-item-icon-marginTop = 8px;
+$topMenu-item-icon-height = 32px;
+$topMenu-item-text-marginTop = 8px;
+$topMenu-item-text-height = 20px;
+
+/* 清除浮动 */
+.clearfix:after {
+  content:"020";
+  display: block;
+  height: 0;
+  clear:both;
+  visibility: hidden;
+}
+.clearfix { zoom: 1; }
+
+/* 字体 */
+.topMenu-wrap {
+  font-family: "Microsoft YaHei", "微软雅黑", "黑体", "宋体", "sans-serif";
+  font-weight: bold;
+}
+
+/* 顶部菜单 */
+.topMenu-wrap {
+  position: relative;
+  background-color: #00A0E9;
+  height: $topMenu-height;
+}
+.topMenu-btn {
+  width: $topMenu-btn-width;
+  height: $topMenu-btn-height;
+  line-height: $topMenu-btn-height;
+  background-color: #00A0E9;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+}
+
+.topMenu-btn.btn-active:hover {
+  color: #fff;
+  background-color: #21B9FF;
+}
+
+.topMenu-btn.btn-disabled:hover {
+  color: #c8c8c8;
+}
+
+.topMenu-btn-left {
+  float: left;
+}
+
+.topMenu-btn-right {
+  float: right;
+}
+
+.btn-disabled {
+  /*display: none;*/
+  color: #c8c8c8;
+}
+
+.topMenu {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  overflow: hidden;
+  height: $topMenu-height;
+}
+/* 一级菜单样式 */
+.topMenu-content {
+  position: absolute;
+}
+.topMenu-item {
+  float: left;
+  margin-left: $topMenu-item-marginLeft;
+  margin-right: $topMenu-item-marginRight;
+}
+.topMenu-item-a {
+  display: block;
+  padding: 5px;
+  width: $topMenu-item-a-width;
+  height: $topMenu-btn-height;
+  text-align: center;
+  color: #FFF;
+}
+
+.topMenu-item-a:hover {
+  color: #fff;
+  background: #21B9FF;
+  cursor: pointer;
+}
+
+.topMenu-item-a.active {
+  color: #03ACE3;
+  background: #EAF8FE;
+}
+
+.topMenu-item-icon {
+  margin-top: $topMenu-item-icon-marginTop;
+  height: $topMenu-item-icon-height;
+  font-size:32px;
+}
+
+.topMenu-item-text {
+  display: block;
+  margin-top: $topMenu-item-text-marginTop;
+  height: $topMenu-item-text-height;
+  line-height: $topMenu-item-text-height;
+  font-size: 16px;
+}

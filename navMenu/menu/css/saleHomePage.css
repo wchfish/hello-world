@@ -1,0 +1,155 @@
+/*共用的顶部样式*/
+html,body {
+    font-family: "Microsoft YaHei", "黑体", "宋体", "sans-serif";
+    font-size: 16px;
+}
+
+.header {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 116px;
+    background: #00A0E9;
+    color: #fff;
+}
+
+.brand {
+    float: left;
+    /*width: 340px;*/
+    height: 48px;
+    padding-left: 40px;
+    padding-top: 16px;
+    background: url(../images/LOGO2.png) 10px 22px no-repeat;
+}
+
+.brand .app-name {
+    margin: 3px 0 0 10px;
+    padding-left: 10px;
+    height: 42px;
+    line-height: 42px;
+    border-left: 0px solid #fff;
+    font-size: 20px;
+}
+.header .top-info {
+    float: right;
+    width: 180px;
+    height: 66px;
+}
+
+#info-box {
+    height: 36px;
+    width: 180px;
+    float: right;
+}
+
+/*按钮样式*/
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 5px 20px;
+    color: #333;
+    font-size: 14px;
+    border: #d9d9d9 1px solid;
+    text-decoration: none;
+    background-color: #f7f7f7;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-notext {
+    padding: 5px 5px;
+}
+
+.btn-default, .btn-key,.btn-notice,.btn-question,.btn-power,.btn-wiki,.btn-invitation, .btn-search, .btn-setting
+{
+    float: right;
+    width: 26px;
+    height: 26px;
+    border: 0;
+    color: #FFF;
+    background: #00A0E9;
+}
+
+.btn-default span.icon, .btn-key span.icon,.btn-notice span.icon,.btn-qusetion span.icon,.btn-power span.icon,.btn-invitation span.icon, .btn-search span.icon, .btn-setting span.icon
+{
+    font-size: 16px;
+}
+
+.btn-default.active, .btn-key.btn-active,.btn-notice.btn-active,.btn-question.btn-active,.btn-invitation.btn-active,.btn-power.btn-active, .btn-search.btn-active, .btn-setting.btn-active
+{
+    background-color: #00ABF8;
+}
+
+.btn-default.btn-active span.icon, .btn-key.btn-active span.icon,.btn-notice.btn-active span.icon,.btn-question.btn-active span.icon,.btn-power.btn-active span.icon,.btn-invitation.btn-active span.icon, .btn-search.btn-active span.icon, .btn-setting.btn-active span.icon
+{
+    color: #FFF;
+}
+
+.btn-power.btn-active span.icon {
+    color: red
+}
+
+.btn-default:hover, .btn-key:hover,.btn-notice:hover,.btn-question:hover,.btn-invitation:hover,.btn-power:hover, .btn-search:hover, .btn-setting:hover
+{
+    background-color: #00ABF8;
+}
+
+.btn-default:hover span.icon, .btn-key:hover span.icon,.btn-notice:hover span.icon,.btn-question:hover span.icon,.btn-power:hover span.icon,.btn-invitation:hover span.icon, .btn-search:hover span.icon, .btn-setting:hover span.icon
+{
+    color: #FFF;
+}
+
+.btn-power:hover span.icon {
+    color: red
+}
+
+
+#info-box span.btn-text {
+    padding: 0;
+}
+
+.btn-notice .icon-notice {
+    position: relative;
+}
+
+.notice-mark {
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    width: 6px;
+    height: 6px;
+    background: url(../images/u42.PNG);
+}
+
+.welcome-info {
+    height: 30px;
+    width: 180px;
+    float: right;
+    overflow: hidden;
+}
+
+.welcome-info span {
+    margin-right: 10px;
+    float: right;
+    font-size: 14px;
+    color: #FFF;
+}
+
+/*顶部导航*/
+.topNav {
+    position: absolute;
+    left: 320px;
+    right: 240px;
+    height: 80px;
+}
+
+.childNav {
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #fff;
+    width: 100%;
+    height: 35px;
+}
