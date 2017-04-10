@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery源码学习</title>
+	<link id="testLink" rel="stylesheet" type="text/css" href="css/default.css">
+
+	<script src="libs/baiduTemplate.js"></script>
+
+	<style type="text/css">
+		.container {
+			border: 1px solid #f00;
+			padding: 10px;
+		}
+		.container-myUl {
+			border: 1px solid #0f0;
+			padding: 10px;
+		}
+		.container-myUl-item {
+			margin: 5px;
+			background: #00f;
+			color: #fff;
+		}
+		.customContextmenu-wrap {
+			border: 1px solid #333;
+			background: #fff;
+			padding: 20px;
+		}
+	</style>
+
+</head>
+<body>
+	<!-- html代码  -->
+	<div id="titleDiv">
+		<p>jquery源码学习</p>
+	</div>
+	<div id="childTitleDiv">
+		<p>鼠标右键点击事件</p>
+	</div>
+	<div id="container" class="container">
+		<ul id="myUl" class="container-myUl">
+			<li class="container-myUl-item">1</li>
+			<li class="container-myUl-item">2</li>
+			<li class="container-myUl-item">3</li>
+			<li class="container-myUl-item">4</li>
+			<li class="container-myUl-item">5</li>
+			<li class="container-myUl-item">6</li>
+			<li class="container-myUl-item">7</li>
+		</ul>
+	</div>
+
+	<div class="buttonContainer" style="margin-top:10px; margin-left:10px;">
+		<button class="myBtn">myBtn</button>
+	</div>
+
+	<!-- js代码 -->
+	<script src="libs/jquery-1.10.2.js"></script>
+
+	<script type="text/javascript">
+
+		/**
+		 * 测试函数拦截器的用法
+		 * */
+		Function.prototype.createInterceptor = function(fcn, scope) {
+			var method = this;
+			return !$.isFunction(fcn) ? this : function() {
+				var me = this, args = arguments;
+				fcn.target = me;
+				fcn.method = method;
+				return (fcn.apply(scope || me || window, args) !== false) ? method
+						.apply(me || window, args) : null;
+			};
+		};
+		/**
+		 * 测试函数代理的用法
+		 * */
+		Function.prototype.createDelegate = function(obj, args, appendArgs) {
+			var method = this;
+			return function() {
+				var callArgs = args || arguments;
+				if (appendArgs === true) {
+					callArgs = Array.prototype.slice.call(arguments, 0);
+					callArgs = callArgs.concat(args);
+				} else if ($.fn.isNumber(appendArgs)) {
+					callArgs = Array.prototype.slice.call(arguments, 0);
+					var applyArgs = [appendArgs, 0].concat(args);
+					Array.prototype.splice.apply(callArgs, applyArgs);
+				}
+				return method.apply(obj || window, callArgs);
+			};
+		};
+		function onBeforeClick() {
+			return false;
+		}
+		$(function(){
+			// 动态添加js文件
+			var str = '/s';
+			var jsScript = '<script type="text/javascript" src="js/jquerySourceCode.js"><\/script>';
+			$('head').append(jsScript);
+
+			/**
+			 * 是否定义过
+			 */
+//			$.fn.isDefined = function(v) {
+//				return typeof v !== 'undefined';
+//			};
+			/**
+			 * 属性复制
+			 */
+//			$.fn.apply = function(o, c, defaults) {
+//				// no "this" reference for friendly out of scope calls
+//				if (defaults) {
+//					$.fn.apply(o, defaults);
+//				}
+//				if (o && c && typeof c == 'object') {
+//					for (var p in c) {
+//						o[p] = c[p];
+//					}
+//				}
+//				return o;
+//			};
+			/**
+			 * 追加属性
+			 */
+//			$.fn.applyIf = function(o, c) {
+//				if (o) {
+//					for (var p in c) {
+//						if (!$.fn.isDefined(o[p])) {
+//							o[p] = c[p];
+//						}
+//					}
+//				}
+//				return o;
+//			};
+			/**
+			 * 是否数字
+			 */
+//			$.fn.isNumber = function(v) {
+//				return typeof v === 'number' && isFinite(v);
+//			};
+			// 函数拦截
+//			$('.myBtn').on('click', function(){
+//				alert( 'clicked' );
+//			}.createInterceptor( onBeforeClick ));
+
+			// 函数代理
+//			var items = [ 1, 2, 3, 4 ];
+//			var total = { totalNum : 0 };
+//			$.each(items, function(index, item) {
+//				total.totalNum += item;
+//			}.createDelegate( total, [7, 8], 3));
+
+			// 对象属性复制和追加
+//			var obj1 = {
+//				property1 : "1",
+//				property2 : "str",
+//				property3 : true
+//			};
+//			var obj2 = {
+//				property1 : "2",
+//				property2 : "char",
+//				prooerty4 : "haha"
+//			};
+//			$.fn.applyIf( obj1, obj2 );
+//			console.log( obj1 );
+			/**
+			 * 是否数字
+			 * */
+			$.fn.isNumber = function( v ) {
+				return typeof v === 'number' && isFinite( v );
+			};
+
+			/**
+			 * 是否为空
+			 * */
+			$.fn.isEmpty = function( v, allowBlank ) {
+				return v === null || v === undefined  || (($.isArray(v) && !v.length))
+					|| (!allowBlank ? v === '' : false);
+			};
+
+			/**
+			 * 是否定义过
+			 * */
+			$.fn.isDefined = function( v ) {
+				return typeof v !== 'undefined';
+			};
+
+			/**
+			 * 是否定义过
+			 * */
+			$.fn.isPrimitive = function( v ) {
+				return typeof v === 'strind' || typeof v === 'number' || typeof v === 'boolean';
+			};
+//			function foo() {
+//
+//			}
+//			var abc = [] ;
+//			if ( abc ) {
+//				console.log('true');
+//			} else {
+//				console.log('false');
+//			}
+		});
+
+
+	</script>
+
+</body>
+</html>

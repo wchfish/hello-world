@@ -1,0 +1,11 @@
+.langSwitcher {
+  width: 200px;
+  height: 40px;
+  background: #000;
+}
+.langSwitcher-item {
+  font-size: 20px;
+}
+.langSwitcher-item--active {
+  background: #f00;
+}

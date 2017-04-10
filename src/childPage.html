@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iframe</title>
+	<style type="text/css">
+		body {
+			border: 1px solid #F00;
+		}
+	</style>
+	<link rel="stylesheet" href="css/blue.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="libs/jquery-1.10.2.js"></script>
+</head>
+<body>
+	<h4>iframe页面</h4>
+	<script type="text/javascript">
+		function iframeFun() {
+			console.log( "haha" );
+		}
+		window.onresize = function() {
+			console.log("iframe-resize");
+		}	
+		document.body.onclick = function() {
+			console.log("iframe-click");
+		}
+	</script>
+</body>
+</html>

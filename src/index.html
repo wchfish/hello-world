@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			border: 1px solid #FF0;
+		}
+		.test {
+			border: 1px solid #f00;
+			width: 100px;
+			height: 100px;
+			background: url('../images/logo.png');
+		}
+	</style>
+	<script src="libs/jquery-1.10.2.js"></script>
+</head>
+<body>
+<iframe src="childPage.html" frameborder="0"></iframe>
+<iframe src="childPage1.html" frameborder="0"></iframe>
+	 <script type="text/javascript">
+		 // 获取当前页面的所有iframe页面，包括嵌套的子iframe
+		 // 用递归的方式实现,遍历一棵树的所有子树
+		 // fixme:当前方法依赖每个页面都有jquery库，需要增加对原生的兼容
+		 // 遍历到子iframe时，子iframe的jquery库还没加载，因此最好用原生方法写
+//		 function getAllIframes(currentWindow) {
+//			 var iframes = [];
+//			 var $childIframes = currentWindow.$('iframe');
+//			 if ($childIframes.length === 0) {
+//			   iframes.push(currentWindow);
+//			   return  iframes;
+//			 } else {
+//				 $childIframes.each(function(index, iframe) {
+//					var iframeWindow = iframe.contentWindow;
+//					var childIframes = getAllIframes(iframeWindow);
+//					iframes.concat(childIframes);
+//				 });
+//				 return iframes;
+//			 }
+//		 }
+
+
+//		 var frames = getAllIframes(window);
+	 </script>
+<script src="js/getIframe.js"></script>
+</body>
+</html>

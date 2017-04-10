@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包与事件监听</title>
+</head>
+<body>
+	<div id="divEle" style="width:100px; height:100px; border:1px solid #F00;">点我</div>
+	<p id="pEle" style="margin-top:20px; color:#00f;"></p>
+	<div style="margin-top:20px">
+		<input id="inputEle" type="text" name="" value="default">
+	</div>
+	<script type="text/javascript">
+		var div = document.getElementById("divEle");
+		/*
+		 *说明：以下的解决方法都不好，代码的可读性变差了。
+		*/
+		//方法1 记录状态值
+		// div.addEventListener("click", (function() {
+		// 	var i = 0;
+		// 	return function() {
+		// 		i++;
+		// 		document.getElementById("pEle").innerText = i;
+		// 	}
+		// })());
+		//方法2 记录状态值
+		// var clickListener = (function() {
+		// 	var i = 0;
+		// 	return function() {
+		// 		i++;
+		// 		document.getElementById("pEle").innerText = i;
+		// 	}
+		// })();	
+		// div.addEventListener("click", clickListener);
+
+		//方法3 外部传参,实际只能传不变的量（如html元素）
+		// div.addEventListener("click", (function(input) {
+		// 	return function() {
+		// 		document.getElementById("pEle").innerText = input.value;
+		// 	}	
+		// })(document.getElementById("inputEle")));
+
+		//方法4 外部传参,实际只能传不变的量（如html元素）
+		// var clickListener = (function(input) {
+		// 	return function() {
+		// 		document.getElementById("pEle").innerText = input.value;
+		// 	}	
+		// })(document.getElementById("inputEle"));
+
+		// div.addEventListener("click", clickListener);
+
+		
+	</script>
+</body>
+</html>
